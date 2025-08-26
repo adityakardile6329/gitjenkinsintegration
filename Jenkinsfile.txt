@@ -6,10 +6,9 @@ pipeline {
        APP_ENV = 'dev'
    }
  
-   stages {
-       stage('Clone') {
+     stage('Checkout') {
            steps {
-               git 'https://github.com/adityakardile6329/gitjenkinsintegration'
+               git branch: 'master', url: 'https://github.com/adityakardile6329/gitjenkinsintegration'
            }
        }
  
